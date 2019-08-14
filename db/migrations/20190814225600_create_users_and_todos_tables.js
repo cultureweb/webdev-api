@@ -1,5 +1,6 @@
  
 exports.up = function(knex, Promise) {
+    
   return knex.schema.createTable('users', function(table) {
       table.increments();
       table.string('name').notNullable();
@@ -16,6 +17,7 @@ exports.up = function(knex, Promise) {
       table.integer('user_id').references('id').inTable('users');
   })
 };
+
 
 exports.down = function(knex, Promise) {
   return knex.schema.dropTable('todos').dropTable('users');
