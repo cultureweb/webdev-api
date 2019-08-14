@@ -30,8 +30,6 @@ const server = http.createServer((req, res) => {
     res.end('<h1>Hello World</h1>');
   });
 
-  
-
 server.listen(port, function() {
     console.log("App is running on port " + port);
 });
