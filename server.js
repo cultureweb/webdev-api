@@ -22,6 +22,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', index);
 app.use('/todos', todos);
 
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    res.end('<h1>Hello World</h1>');
+  });
+
 server.listen(port, function() {
     console.log("App is running on port " + port);
 });
