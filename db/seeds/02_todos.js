@@ -1,13 +1,33 @@
-
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('users').del()
+  return knex('todos').del()
     .then(function () {
       // Inserts seed entries
-      return knex('users').insert([
-        {id: 1, name: 'Peter', email: 'peter@test.com'},
-        {id: 2, name: 'Stark', email: 'Stark@test.com'},
-        {id: 3, name: 'Thor', email: 'Stark@test.com'}
+      return knex('todos').insert([
+        { 
+          title: 'go to work',
+          user_id: 1,
+        },
+        { 
+          title: 'go to the beach',
+          user_id: 2,
+        },
+        { 
+          title: 'get mails',
+          user_id: 3,
+        },
+        { 
+          title: 'get some headphones',
+          user_id: 3,
+        },
+        { 
+          title: 'get some headphones',
+          user_id: 3,
+        },
+        { 
+          title: 'get the food',
+          user_id: 3,
+        },
       ]);
     });
 };
