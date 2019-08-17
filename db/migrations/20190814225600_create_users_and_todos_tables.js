@@ -9,11 +9,11 @@ exports.up = function(knex, Promise) {
     })
     .createTable('todos', function(table) {
       table.increments('id');
-      table.timestamp('created_at').defaultTo(knex.fn.now());
-      table.timestamp('updated_at').defaultTo(knex.fn.now());
       table.string('title').notNullable();
       table.boolean('completed').notNullable().defaultTo(false);
       table.integer('user_id').references('id').inTable('users');
+      table.timestamp('created_at').defaultTo(knex.fn.now());
+      table.timestamp('updated_at').defaultTo(knex.fn.now());
     });
   };
   

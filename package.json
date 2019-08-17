@@ -4,7 +4,8 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "dev": "nodemon server.js",
+    "start":"node server.js"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -20,5 +21,8 @@
     "objection": "^0.7.12",
     "pg": "^4.5.5",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
