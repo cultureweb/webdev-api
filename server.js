@@ -5,6 +5,8 @@
 const app = express(); // Include body-parser
 const bodyParser = require("body-parser");
 
+const cors = require('cors')
+
 const routes = require('./routes/todos')
 
 const PORT = process.env.PORT || 8000;
@@ -25,6 +27,7 @@ app.use(function(req, res, next) {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors())
 
 // Routes
 app.use('/', routes)
