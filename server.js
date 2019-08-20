@@ -33,7 +33,7 @@ app.use(cors())
 app.use('/', routes)
 
 const logger = console
-
+/* 
 var cors_proxy = require('cors-anywhere');
 cors_proxy.createServer({
     originWhitelist: [], // Allow all origins
@@ -41,9 +41,9 @@ cors_proxy.createServer({
     removeHeaders: ['cookie', 'cookie2']
 }).listen(PORT, HOST, () => {
   logger.info(`Running on http://${HOST}:${PORT}`);
-});
+}); */
 
-/* const server = app
+const server = app
 .listen(parseInt(PORT, 10), HOST, () => {
   logger.info(`Running on http://${HOST}:${PORT}`);
-}); */
+});
