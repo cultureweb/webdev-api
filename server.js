@@ -5,7 +5,7 @@
 const app = express(); // Include body-parser
 const bodyParser = require("body-parser");
 
-const cors = require('cors')
+/* const cors = require('cors') */
 
 const routes = require('./routes/todos')
 
@@ -27,7 +27,7 @@ const knex = require('./db/knex');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors())
+/* app.use(cors()) */
 
 // Routes
 app.use('/', routes)
