@@ -15,14 +15,14 @@ const HOST = process.env.HOST || '0.0.0.0';
 const knex = require('./db/knex');
 
 // Configure headers
-app.use(function(req, res, next) {
+/* app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", '*');
   res.header("Access-Control-Allow-Credentials", true);
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
   next();
 });
-
+ */
 // Configure body-parser setting
 
 app.use(bodyParser.json());
