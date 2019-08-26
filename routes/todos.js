@@ -15,7 +15,7 @@ router.get('/v1/todos', function(req, res) {
       })
 })
   
-  router.get('/v1/todos-of-user/:id', function(req, res) {
+  router.get('/v1/todos/:id', function(req, res) {
     knex.from('todos')
         .innerJoin('users', 'todos.user_id', 'users.id')
         .where('todos.user_id', req.params.id)
