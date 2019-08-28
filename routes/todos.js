@@ -18,7 +18,7 @@ router.get('/v1/todos', function(req, res) {
   router.get('/v1/todos/:id', function(req, res) {
     knex.from('todos')
         .innerJoin('users', 'todos.user_id', 'users.id')
-        .where('todos.user_id', req.params.id)
+        .where('todos.id', req.params.id)
         .then(function(data) {
           res.send(data)
         })
