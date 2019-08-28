@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const knex = require('../db/knex')
 
-router.get('/', function(req, res){
-   res.redirect('/v1/todos');
-});
+// router.get('/', function(req, res){
+//    res.redirect('/v1/todos');
+// });
 
 /* This router is mounted at http/localhost:8000/v1/todos */
 router.get('/v1/todos', function(req, res) {
